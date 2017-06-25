@@ -12,6 +12,12 @@ Inspired by github.com/AsynkronIT/protoactor-go
 ### Drawbacks
 - Handle of request slower for 10-15 ns
 
+## Documentation
+
+### Install
+
+- Soon...
+
 ## Other
 
 ### Benchmark
