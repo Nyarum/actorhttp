@@ -1,26 +1,14 @@
-# Actor HTTP
+package main
 
-Inspired by github.com/AsynkronIT/protoactor-go
+import (
+	"net/http"
 
-## Features
+	"github.com/AsynkronIT/protoactor-go/actor"
+	"github.com/Nyarum/actorhttp"
+	"github.com/go-playground/pure"
+	mw "github.com/go-playground/pure/_examples/middleware/logging-recovery"
+)
 
-- Pool of actors
-- State machine for handlers
-- Supervisor for handlers
-- Flexible with any HTTP router or framework
-
-### Drawbacks
-- Handle of request slower for 10-15 ns
-
-## Other
-
-### Benchmark
-
-- Soon...
-
-### Example
-
-```
 type HandlerActor struct{}
 
 func (state *HandlerActor) Receive(context actor.Context) {
@@ -43,6 +31,3 @@ func main() {
 
 	http.ListenAndServe(":3007", p.Serve())
 }
-```
-
-or you can find it in `cmd` folder
